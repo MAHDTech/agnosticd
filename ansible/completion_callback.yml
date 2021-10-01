@@ -39,5 +39,6 @@
             {%- endif -%}
         headers:
           Authorization: Bearer {{ agnosticd_callback_token }}
+        validate_certs: "{{ validate_tower_certs | default('yes') }}"
       # Best effort
       ignore_errors: true
